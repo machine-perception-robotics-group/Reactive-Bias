@@ -17,10 +17,10 @@ CUB_GHA   images.txt    val    images    train    split.py
 $python CUBGHA_rename.py
 ```
 
-## スクラッチ学習
+## 事前学習
 imagenetでスクラッチ学習をする場合は以下のコマンドを使用してください
 ```
-$ python3 -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model deit_small_patch16_224_12 --mixup 0.8 --cutmix 1.0 --batch-size 128 --epochs 300 --num_workers 40 --data-path $PATH --data-set CUB --output_dir $SAVE_PATH
+$ python3 -m torch.distributed.launch --nproc_per_node=4 --use_env main_pre.py --model deit_small_patch16_224_12 --mixup 0.8 --cutmix 1.0 --batch-size 128 --epochs 300 --num_workers 40 --data-path $PATH --output_dir $SAVE_PATH
 ```
 --data-pathの$PATHにはデータセットのパスを入力してください．
 
