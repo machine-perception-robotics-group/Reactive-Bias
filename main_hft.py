@@ -389,6 +389,8 @@ def main(args):
         for name_p,p in model.named_parameters():
             if 'att_bias' in name_p:
                 p.requires_grad = True
+            elif 'attn.' in name_p:
+                p.requires_grad = True
             elif 'head.' in name_p:
                 p.requires_grad = True
             elif 'fc_norm.' in name_p:
