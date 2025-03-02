@@ -4,9 +4,9 @@ from functools import partial
 
 from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 #from timm.models.vision_transformer import Mlp,PatchEmbed, _cfg
-from vit_RB import Mlp,PatchEmbed,_cfg
+from vit_LB import Mlp,PatchEmbed,_cfg
 #from timm.models.vision_transformer import VisionTransformer, _cfg
-from vit_RB import VisionTransformer, _cfg
+from vit_LB import VisionTransformer, _cfg
 from timm.models.helpers import build_model_with_cfg, checkpoint_seq
 from timm.models.registry import register_model
 from timm.models.layers import trunc_normal_,DropPath
