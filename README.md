@@ -59,7 +59,7 @@ CUBGHA_rename.pyを使用した場合はGHAと入力してください．
 
 ## 評価用コマンド
 ```
-python main.py --eval --device cuda:1 --resume #SAVED_PATH --model deit_small_patch16_224_12 --data-path $PATH --data-set CUB
+python main_eval.py --eval --device cuda:1 --resume #SAVED_PATH --model deit_small_patch16_224_12 --data-path $PATH --data-set CUB
 ```
 --finetuneの$SAVED_PATHには評価したモデルのcheckpointのパスを入力してください．
 
